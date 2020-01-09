@@ -28,11 +28,17 @@ class ViewController: UIViewController {
         
         navigationItem.title = "Now Playing"
         
+        let nib = UINib(nibName: "CustomMovieTableViewCell", bundle: nil)
+        
+        movieTableView.register(nib, forCellReuseIdentifier: "movieCell")
         movieTableView.rowHeight = 100.0
         
         setQuery()
     }
 
+    //MARK: - Networking
+    
+    // Query the data
     func setQuery() {
         
         let params: [String: String] = ["api_key": APIKEY, "language": "en-US", "page": "1"]
@@ -41,6 +47,7 @@ class ViewController: UIViewController {
         
     }
     
+    // Parse the data
     func fetchData(url: String, paramemters: [String: String]) {
         
         Alamofire.request(url, method: .get, parameters: paramemters).responseJSON {
@@ -53,13 +60,12 @@ class ViewController: UIViewController {
                         self.movieTableView.reloadData()
                     }
                 }
-                
             }
         }
-        
     }
-
 }
+
+//MARK: - TableView Data Source Methods
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -69,11 +75,30 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! CustomMovieTableViewCell
         
-        let eachMovie = self.movies[indexPath.row]
-        
-        cell.textLabel?.text = (eachMovie["title"] as? String) ?? ""
+        if movies.count > 0 {
+            
+            // Set up each movie cell with its title and release date
+            let eachMovie = self.movies[indexPath.row]
+            
+            cell.movieTitle.text = (eachMovie["title"] as? String) ?? ""
+            cell.movieReleaseDate.text = (eachMovie["release_date"] as? String) ?? ""
+            
+            
+            // Also set the movie poster image for each movie cell
+            if let imageURL = eachMovie["poster_path"] as? String {
+                Alamofire.request(baseURLImageString + imageURL).responseImage { (response) in
+                    if let image = response.result.value {
+                        let cornerImage = image.af_imageRounded(withCornerRadius: 25.0)
+                        DispatchQueue.main.async {
+                            cell.movieImage.image = cornerImage
+                        }
+                    }
+                }
+            }
+            
+        }
         
         return cell
         
