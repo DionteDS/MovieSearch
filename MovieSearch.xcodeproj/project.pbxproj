@@ -17,6 +17,7 @@
 		42C5A28123C7B8C90094374D /* CustomMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5A27F23C7B8C90094374D /* CustomMovieTableViewCell.swift */; };
 		42C5A28223C7B8C90094374D /* CustomMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C5A28023C7B8C90094374D /* CustomMovieTableViewCell.xib */; };
 		42CE308423C9035500FBFCB5 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CE308323C9035500FBFCB5 /* InfoViewController.swift */; };
+		42CE308723C9142000FBFCB5 /* PopularMovies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42CE308623C9142000FBFCB5 /* PopularMovies.storyboard */; };
 		C830D996818B43D73E2A4B06 /* Pods_MovieSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240C456753BC3EB9DA8C9F07 /* Pods_MovieSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		42C5A27F23C7B8C90094374D /* CustomMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMovieTableViewCell.swift; sourceTree = "<group>"; };
 		42C5A28023C7B8C90094374D /* CustomMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMovieTableViewCell.xib; sourceTree = "<group>"; };
 		42CE308323C9035500FBFCB5 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		42CE308623C9142000FBFCB5 /* PopularMovies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopularMovies.storyboard; sourceTree = "<group>"; };
 		D479556C3A7D96D8BE8F8184 /* Pods-MovieSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieSearch.release.xcconfig"; path = "Target Support Files/Pods-MovieSearch/Pods-MovieSearch.release.xcconfig"; sourceTree = "<group>"; };
 		FF43868D67FD50325B21A8A6 /* Pods-MovieSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieSearch.debug.xcconfig"; path = "Target Support Files/Pods-MovieSearch/Pods-MovieSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,12 +84,11 @@
 			children = (
 				42C5A26423C7A9160094374D /* AppDelegate.swift */,
 				42C5A26623C7A9160094374D /* SceneDelegate.swift */,
-				42C5A28323C7C10C0094374D /* Controllers */,
+				42CE308523C9140A00FBFCB5 /* Popular Movies */,
 				42C5A28423C7C1260094374D /* Views */,
 				42C5A26D23C7A9170094374D /* Assets.xcassets */,
 				42C5A26F23C7A9170094374D /* LaunchScreen.storyboard */,
 				42C5A27223C7A9170094374D /* Info.plist */,
-				42C5A27E23C7B8AF0094374D /* Custom Table View Cell */,
 				42C5A27C23C7B0250094374D /* Serects.swift */,
 			);
 			path = MovieSearch;
@@ -102,21 +103,31 @@
 			path = "Custom Table View Cell";
 			sourceTree = "<group>";
 		};
-		42C5A28323C7C10C0094374D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				42C5A26823C7A9160094374D /* ViewController.swift */,
-				42CE308323C9035500FBFCB5 /* InfoViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		42C5A28423C7C1260094374D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				42C5A26A23C7A9160094374D /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		42CE308523C9140A00FBFCB5 /* Popular Movies */ = {
+			isa = PBXGroup;
+			children = (
+				42C5A27E23C7B8AF0094374D /* Custom Table View Cell */,
+				42CE308823C9161600FBFCB5 /* Controllers */,
+				42CE308623C9142000FBFCB5 /* PopularMovies.storyboard */,
+			);
+			path = "Popular Movies";
+			sourceTree = "<group>";
+		};
+		42CE308823C9161600FBFCB5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				42C5A26823C7A9160094374D /* ViewController.swift */,
+				42CE308323C9035500FBFCB5 /* InfoViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		B59BC18ACD1ADA69DC41945B /* Frameworks */ = {
@@ -190,6 +201,7 @@
 				42C5A27123C7A9170094374D /* LaunchScreen.storyboard in Resources */,
 				42C5A26E23C7A9170094374D /* Assets.xcassets in Resources */,
 				42C5A26C23C7A9160094374D /* Main.storyboard in Resources */,
+				42CE308723C9142000FBFCB5 /* PopularMovies.storyboard in Resources */,
 				42C5A28223C7B8C90094374D /* CustomMovieTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
