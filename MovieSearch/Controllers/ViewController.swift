@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     let baseURLImageString = "https://image.tmdb.org/t/p/w500"
     
     var movies: [[String: Any]] = [[String: Any]]()
+    var row = 0
     
 
     override func viewDidLoad() {
@@ -63,6 +64,8 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
 }
 
 //MARK: - TableView Data Source Methods
@@ -104,11 +107,32 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    // When selecting a cell set the row to the selected indexPath.row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let moviePicked = self.movies[indexPath.row]
-        print(moviePicked["title"] as! String)
+        if let indexPath = tableView.indexPathForSelectedRow?.row {
+            row = indexPath
+        }
+        
+        performSegue(withIdentifier: "infoVC", sender: self)
+        
         tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    // Prepare data to be send over to InfoViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "infoVC" {
+            let controller = segue.destination as! InfoViewController
+            
+            let movie = movies[row]
+            
+            controller.mTitle = movie["title"] as? String
+            controller.summary = movie["overview"] as? String
+            controller.imageSelectedURL = movie["poster_path"] as? String
+            
+        }
         
     }
     

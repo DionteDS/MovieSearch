@@ -46,11 +46,58 @@
                     <navigationItem key="navigationItem" id="J19-4y-2V2"/>
                     <connections>
                         <outlet property="movieTableView" destination="8nk-kU-3kh" id="qaC-SX-dOJ"/>
+                        <segue destination="ZdJ-AZ-Ykt" kind="show" identifier="infoVC" id="oHP-aD-dj2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="121.875"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="8xu-CE-gaJ">
+            <objects>
+                <viewController id="ZdJ-AZ-Ykt" customClass="InfoViewController" customModule="MovieSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6o0-3l-KdV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lpd-Gn-TSC">
+                                <rect key="frame" x="0.0" y="152" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="lZa-ab-gjK"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hTj-fg-XvS">
+                                <rect key="frame" x="0.0" y="530" width="414" height="295"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="295" id="fs6-Ns-rCd"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hTj-fg-XvS" firstAttribute="trailing" secondItem="SXF-zQ-cv6" secondAttribute="trailing" id="EcV-aC-JIx"/>
+                            <constraint firstItem="hTj-fg-XvS" firstAttribute="leading" secondItem="SXF-zQ-cv6" secondAttribute="leading" id="hcR-ez-oMS"/>
+                            <constraint firstItem="lpd-Gn-TSC" firstAttribute="top" secondItem="SXF-zQ-cv6" secondAttribute="top" constant="64" id="kyC-Ue-Bk2"/>
+                            <constraint firstItem="lpd-Gn-TSC" firstAttribute="trailing" secondItem="SXF-zQ-cv6" secondAttribute="trailing" id="lmm-vD-RaC"/>
+                            <constraint firstItem="lpd-Gn-TSC" firstAttribute="leading" secondItem="SXF-zQ-cv6" secondAttribute="leading" id="peB-Qq-bWZ"/>
+                            <constraint firstItem="hTj-fg-XvS" firstAttribute="top" secondItem="lpd-Gn-TSC" secondAttribute="bottom" constant="78" id="tBl-CK-2lF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SXF-zQ-cv6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kag-gr-TPE"/>
+                    <connections>
+                        <outlet property="movieInfoField" destination="hTj-fg-XvS" id="v9h-hz-TQo"/>
+                        <outlet property="moviePosterImage" destination="lpd-Gn-TSC" id="bkB-HT-S7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ByC-MQ-4bk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1879.7101449275365" y="122.54464285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="inZ-jX-xmq">
