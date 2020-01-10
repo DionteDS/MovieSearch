@@ -78,14 +78,14 @@
 		42C5A26323C7A9160094374D /* MovieSearch */ = {
 			isa = PBXGroup;
 			children = (
-				42C5A27E23C7B8AF0094374D /* Custom Table View Cell */,
 				42C5A26423C7A9160094374D /* AppDelegate.swift */,
 				42C5A26623C7A9160094374D /* SceneDelegate.swift */,
-				42C5A26823C7A9160094374D /* ViewController.swift */,
-				42C5A26A23C7A9160094374D /* Main.storyboard */,
+				42C5A28323C7C10C0094374D /* Controllers */,
+				42C5A28423C7C1260094374D /* Views */,
 				42C5A26D23C7A9170094374D /* Assets.xcassets */,
 				42C5A26F23C7A9170094374D /* LaunchScreen.storyboard */,
 				42C5A27223C7A9170094374D /* Info.plist */,
+				42C5A27E23C7B8AF0094374D /* Custom Table View Cell */,
 				42C5A27C23C7B0250094374D /* Serects.swift */,
 			);
 			path = MovieSearch;
@@ -98,6 +98,22 @@
 				42C5A28023C7B8C90094374D /* CustomMovieTableViewCell.xib */,
 			);
 			path = "Custom Table View Cell";
+			sourceTree = "<group>";
+		};
+		42C5A28323C7C10C0094374D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				42C5A26823C7A9160094374D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		42C5A28423C7C1260094374D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				42C5A26A23C7A9160094374D /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B59BC18ACD1ADA69DC41945B /* Frameworks */ = {

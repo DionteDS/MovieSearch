@@ -104,5 +104,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let moviePicked = self.movies[indexPath.row]
+        print(moviePicked["title"] as! String)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
     
 }
