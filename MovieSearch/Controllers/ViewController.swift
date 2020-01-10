@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Now Playing"
+        navigationController?.navigationBar.backgroundColor = UIColor.red
         
         let nib = UINib(nibName: "CustomMovieTableViewCell", bundle: nil)
         
