@@ -17,6 +17,7 @@ class SearchForMovieViewController: UIViewController {
     @IBOutlet weak var searchTableView: UITableView!
     
     var searchedMovies: [[String: Any]] = [[String: Any]]()
+    var row = 0
     
     let baseSearchURL = "https://api.themoviedb.org/3/search/movie"
     let baseImageURL = "https://image.tmdb.org/t/p/w500"
@@ -95,6 +96,33 @@ extension SearchForMovieViewController: UITableViewDelegate, UITableViewDataSour
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let indexPath = tableView.indexPathForSelectedRow?.row {
+            row = indexPath
+        }
+        
+        performSegue(withIdentifier: "searchInfoVC", sender: self)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    // Pass data over to get the info for the selected movie cell
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "searchInfoVC" {
+            let controller = segue.destination as! SearchMovieInfoViewController
+            
+            let eachMovie = self.searchedMovies[row]
+            
+            controller.mTitle = eachMovie["title"] as? String
+            controller.movieImageURL = eachMovie["poster_path"] as? String
+            controller.summary = eachMovie["overview"] as? String
+        }
+        
     }
     
 }

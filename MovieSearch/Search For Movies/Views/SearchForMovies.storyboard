@@ -55,11 +55,57 @@
                     <connections>
                         <outlet property="searchBar" destination="LKx-jb-wwD" id="afM-a5-grX"/>
                         <outlet property="searchTableView" destination="m7W-yz-a32" id="w2h-zS-ZVc"/>
+                        <segue destination="3Ct-Ak-e7O" kind="show" identifier="searchInfoVC" id="RPT-KI-fg8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfT-Bg-MwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="804.34782608695662" y="28.794642857142854"/>
+        </scene>
+        <!--movie-->
+        <scene sceneID="KlO-0U-sIZ">
+            <objects>
+                <viewController id="3Ct-Ak-e7O" customClass="SearchMovieInfoViewController" customModule="MovieSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xvh-i5-jfF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rSb-eA-qje">
+                                <rect key="frame" x="0.0" y="152" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="xBC-MH-OMq"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dRh-TG-kNe">
+                                <rect key="frame" x="0.0" y="476" width="414" height="337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rSb-eA-qje" firstAttribute="leading" secondItem="JX4-Hm-J3V" secondAttribute="leading" id="6cr-n3-hn0"/>
+                            <constraint firstItem="dRh-TG-kNe" firstAttribute="trailing" secondItem="JX4-Hm-J3V" secondAttribute="trailing" id="9WL-rh-7iQ"/>
+                            <constraint firstItem="dRh-TG-kNe" firstAttribute="top" secondItem="rSb-eA-qje" secondAttribute="bottom" constant="24" id="B45-qT-ftO"/>
+                            <constraint firstItem="rSb-eA-qje" firstAttribute="trailing" secondItem="JX4-Hm-J3V" secondAttribute="trailing" id="H7V-Fn-vnt"/>
+                            <constraint firstItem="dRh-TG-kNe" firstAttribute="bottom" secondItem="JX4-Hm-J3V" secondAttribute="bottom" id="IOu-YZ-DUa"/>
+                            <constraint firstItem="dRh-TG-kNe" firstAttribute="leading" secondItem="JX4-Hm-J3V" secondAttribute="leading" id="Sc6-Bs-ZeF"/>
+                            <constraint firstItem="rSb-eA-qje" firstAttribute="top" secondItem="JX4-Hm-J3V" secondAttribute="top" constant="12" id="oBi-aq-VGz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JX4-Hm-J3V"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="movie" id="Vzq-I6-gE7"/>
+                    <connections>
+                        <outlet property="movieImageView" destination="rSb-eA-qje" id="hH9-Og-5jz"/>
+                        <outlet property="summaryTextLabel" destination="dRh-TG-kNe" id="68C-rd-s2Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AGd-r0-Mgm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="29"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XsN-5b-1w0">

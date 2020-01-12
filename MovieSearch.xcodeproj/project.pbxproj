@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		427C116C23CADB560065864E /* SearchMovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C116B23CADB560065864E /* SearchMovieInfoViewController.swift */; };
 		42B8575C23CAC34C00BFAF4E /* SearchMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B8575A23CAC34C00BFAF4E /* SearchMovieTableViewCell.swift */; };
 		42B8575D23CAC34C00BFAF4E /* SearchMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B8575B23CAC34C00BFAF4E /* SearchMovieTableViewCell.xib */; };
 		42C5A26523C7A9160094374D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5A26423C7A9160094374D /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		240C456753BC3EB9DA8C9F07 /* Pods_MovieSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		427C116B23CADB560065864E /* SearchMovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieInfoViewController.swift; sourceTree = "<group>"; };
 		42B8575A23CAC34C00BFAF4E /* SearchMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieTableViewCell.swift; sourceTree = "<group>"; };
 		42B8575B23CAC34C00BFAF4E /* SearchMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMovieTableViewCell.xib; sourceTree = "<group>"; };
 		42C5A26123C7A9160094374D /* MovieSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				42CE308C23C91A2E00FBFCB5 /* SearchForMovieViewController.swift */,
+				427C116B23CADB560065864E /* SearchMovieInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				427C116C23CADB560065864E /* SearchMovieInfoViewController.swift in Sources */,
 				42C5A28123C7B8C90094374D /* CustomMovieTableViewCell.swift in Sources */,
 				42CE308D23C91A2E00FBFCB5 /* SearchForMovieViewController.swift in Sources */,
 				42B8575C23CAC34C00BFAF4E /* SearchMovieTableViewCell.swift in Sources */,
