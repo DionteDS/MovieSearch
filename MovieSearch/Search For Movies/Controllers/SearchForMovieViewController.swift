@@ -121,6 +121,7 @@ extension SearchForMovieViewController: UITableViewDelegate, UITableViewDataSour
             controller.mTitle = eachMovie["title"] as? String
             controller.movieImageURL = eachMovie["poster_path"] as? String
             controller.summary = eachMovie["overview"] as? String
+            print(eachMovie["id"] as! Int)
         }
         
     }
