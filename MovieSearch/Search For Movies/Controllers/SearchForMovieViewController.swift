@@ -36,6 +36,8 @@ class SearchForMovieViewController: UIViewController {
         
         searchTableView.rowHeight = 100.0
         
+//        let apiKey = "Place API Key here"
+        
     }
     
     func setSearchQuery(movieSearch: String) {
