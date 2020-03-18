@@ -6,6 +6,8 @@ This app allows you to search for a movie using The Movie Database API.
 
 The instructions below will allow you to get a copy of the project, and be able to run the project on your system.
 
+You will also need to sign up on The Movie Database API for an api key.
+
 ### Prerequisites
 
 * iOS13.0+/macOS10.15+
